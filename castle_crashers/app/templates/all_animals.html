@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<ul>
+{% for movie in movies %}
+  <a href = "/movie/{{movie.id}}">{{movie.name}}</a>
+{% endfor %}
+</ul>
+<a href = "/">Back</a>
+{% endblock %}

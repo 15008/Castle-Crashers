@@ -1,0 +1,20 @@
+<p>
+  Name: {{movie.name}}
+</p>
+<p>
+  Description: {{movie.description}}
+</p>
+<p>
+  Rating: {{movie.rating}}
+</p>
+<p>
+  Release Date: {{movie.rel_date}}
+</p>
+<p>
+  Actors
+</p>
+(%for role in movie.roles%)
+  <p>
+    ((role.name) (role id: ((role.id)) played by ((role.actor.name)) - (actor id: ((role.actor.id))))
+    </p>
+<a href = "/all_movies">Back</a>
