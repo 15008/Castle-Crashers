@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<ul>
+{% for animal in animals %}
+  <a href = "/animalorb/{{animal.id}}">{{animal.name}}</a>
+{% endfor %}
+</ul>
+<a href = "/">Back</a>
+{% endblock %}
+<!---->

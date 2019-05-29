@@ -1,0 +1,21 @@
+html {
+  background-color: #FFFFFF;
+  color: #ffffff;
+}
+p {
+  font-family: arial;
+  font-size: 20px;
+  margin: 5px;
+}
+h1 {
+  font-size: 6vw;
+  margin: 0px:
+  padding: 0px;
+  font-family: arial;
+}
+a:visited {
+  color: #ffffff;
+}
+a:link {
+  colour: yellow;
+}

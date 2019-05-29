@@ -1,0 +1,17 @@
+navigation bar
+
+<!-- the first one could just be written as:
+
+  <a href="/">HOME</a>
+
+'url_for' is used along with the name of the '/'
+function because if we ever change the name of the
+home route it won't matter - it references it by the
+function regardless of the route name.
+
+--snippet from routes.py--
+
+@app.route('/')      # this is the '/' route
+def home():          # this is the '/' function
+
+This is not mandatory, its just best practice. -->
