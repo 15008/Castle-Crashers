@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+<ul>
+{% for location in locations %}
+  <a href = "/location/{{location.id}}">{{location.name}}</a>
+  <br>
+{% endfor %}
+</ul>
+{% endblock %}

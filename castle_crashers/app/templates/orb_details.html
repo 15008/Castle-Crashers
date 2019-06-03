@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+<p>
+  Name: <br> {{animal.name}}
+  <br>
+  Description: <br> {{animal.description}}
+  <br>
+  Location Found: <br> {{animal.location}}
+  <br>
+  Item Requirements: <br> {{animal.requirement}}
+  <br>
+  Bonuses:
+  <br>
+  Magic: {{animal.magicBonus}}
+  <br>
+  Strength: {{animal.strengthBonus}}
+  <br>
+  Defense: {{animal.defenseBonus}}
+  <br>
+  Agility: {{animal.agilityBonus}}
+  <br>
+  Experience Multiplier: {{animal.xpMultiplier}}
+</p>
+{% endblock %}
