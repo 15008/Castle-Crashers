@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
-<ul>
-{% for weapon in weapons %}
-  <a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a>
-  <br>
-{% endfor %}
-</ul>
+<section>
+  <ul>
+    {% for weapon in weapons %}
+      <p><a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a></p>
+    {% endfor %}
+  </ul>
+</section>
 {% endblock %}

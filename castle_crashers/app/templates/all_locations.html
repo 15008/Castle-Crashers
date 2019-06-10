@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
+<section>
 <ul>
-{% for location in locations %}
-  <a href = "/location/{{location.id}}">{{location.name}}</a>
-  <br>
-{% endfor %}
-</ul>
+  {% for location in locations %}
+    <p><a href = "/location/{{location.id}}">{{location.name}}</a></p>
+  {% endfor %}
+  </ul>
+</section>
 {% endblock %}

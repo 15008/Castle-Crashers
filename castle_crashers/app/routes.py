@@ -16,7 +16,8 @@ def all_orbs():
 @app.route("/orb/<id>")
 def orb_details(id):
     orb = Orb.query.filter_by(id = id).first()
-    return render_template('orb_details.html', page_title="Animal Orb Details", orb=orb)
+    location = Location.query.filter_by(id = id).first()
+    return render_template('orb_details.html', page_title="Animal Orb Details", orb=orb, location=location)
 
 @app.route('/all_locations')
 def all_locations():
@@ -36,4 +37,5 @@ def all_weapons():
 @app.route("/weapon/<id>")
 def weapon_details(id):
     weapon = Weapon.query.filter_by(id = id).first()
-    return render_template('weapon_details.html', page_title="Weapon Details", weapon=weapon)
+    location = Location.query.filter_by(id = id).first()
+    return render_template('weapon_details.html', page_title="Weapon Details", weapon=weapon, location=location)

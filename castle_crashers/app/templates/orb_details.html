@@ -1,24 +1,24 @@
 {% extends 'layout.html' %}
 {% block content %}
 <p>
-  Name: <br> {{animal.name}}
+  Name: <br> {{orb.name}}
   <br>
-  Description: <br> {{animal.description}}
+  Description: <br> {{orb.description}}
   <br>
-  Location Found: <br> {{animal.location}}
+  Location Found: <br> <a href="../location/{{orb.locationid}}">{{location.name}}</a>
   <br>
-  Item Requirements: <br> {{animal.requirement}}
+  Item Requirements: <br> {{orb.req }}
   <br>
   Bonuses:
   <br>
-  Magic: {{animal.magicBonus}}
+  Magic: {{orb.magicBonus}}
   <br>
-  Strength: {{animal.strengthBonus}}
+  Strength: {{orb.strengthBonus}}
   <br>
-  Defense: {{animal.defenseBonus}}
+  Defense: {{orb.defenseBonus}}
   <br>
-  Agility: {{animal.agilityBonus}}
+  Agility: {{orb.agilityBonus}}
   <br>
-  Experience Multiplier: {{animal.xpMultiplier}}
+  Experience Multiplier: {{orb.xpBonus}}
 </p>
 {% endblock %}

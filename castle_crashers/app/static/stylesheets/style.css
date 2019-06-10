@@ -1,0 +1,46 @@
+html {
+  background-color: #464646;
+  color: #000000;
+}
+p {
+  font-family: 'Basic', sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+section, nav {
+  background-color: #FFFFFF;
+  margin: 0 20px 20px 20px;
+}
+h1 {
+  font-size: 5vw;
+  font-family: 'Bungee Shade', cursive;
+  color: #FFFFFF;
+  margin: 10px;
+  line-height: 7vw;
+  text-align: center;
+}
+a:visited {
+  color: #000000;
+}
+a:link {
+  color: #000000;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+a {
+  margin: 0;
+}
+li a {
+  text-decoration: none;
+  float: left;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  font-family: 'Bungee', cursive;
+  line-height: 20px;
+}

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section>
+  <p>
+    Name: <br> {{location.name}}
+    <br>
+    Description: <br> {{location.description}}
+    <br>
+    Items in {{location.name}}:
+    <br>
+    {% for weapon in location.weaponLoc %}
+      <a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a>
+      <br>
+    {% endfor %}
+    Chapter: <br> {{location.chapter}}
+    <br>
+    Bonuses: <br> {{location.localeType}}
+  </p>
+{% endblock %}

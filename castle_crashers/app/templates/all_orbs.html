@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
-<ul>
-{% for orb in orbs %}
-  <a href = "/orb/{{orb.id}}">{{orb.name}}</a>
-  <br>
-{% endfor %}
-</ul>
+<section>
+  <ul>
+  {% for orb in orbs %}
+    <p><a href = "/orb/{{orb.id}}">{{orb.name}}</a></p>
+  {% endfor %}
+  </ul>
+</section>
 {% endblock %}
