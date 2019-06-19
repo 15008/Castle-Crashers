@@ -1,10 +1,8 @@
 {% extends 'layout.html' %}
 {% block content %}
-<section>
-  <ul>
-    {% for weapon in weapons %}
-      <p><a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a></p>
+<div class = "grid-container">
+  {% for weapon in weapons %}
+    <div><a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a></div>
     {% endfor %}
-  </ul>
-</section>
+</div>
 {% endblock %}

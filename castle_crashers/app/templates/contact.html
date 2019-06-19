@@ -1,17 +1,22 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<br />
-<form method="POST" enctype="multipart/form-data">
-  {{ form.csrf_token }}
-  
-  TITLE: {{form.title}} <br />
-  YEAR: {{form.year}}  <br />
-  DESCRIPTION: {{form.description}} <br />
-  <br />
-  {{form.errors}}
-  <br />
-  {{form.submit}}
-</form>
+<section>
+  <p>Add a location</p><br>
+  <form method="POST" enctype="multipart/form-data">
+    {{ formAL.csrf_token }}
+    {{ formAL.name}} <span style="color:red"> {{formAL.name.errors}} </span> <br>
+    {{ formAL.description}} <span style="color:red"> {{formAL.description.errors}} </span> <br>
+    {{ formAL.chapter}} <span style="color:red"> {{formAL.chapter.errors}} </span> <br>
+    {{ formAL.localeType}} <span style="color:red"> {{formAL.localeType.errors}} </span> <br>
+    <input type="submit" value="Add this Location">
+  </form>
 
+    <p>Remove a location</p><br>
+  <form method="POST" enctype="multipart/form-data">
+    {{ formRL.csrf_token }}
+    {{ formRL.name }} <span style="color:red"> {{formRL.name.errors}} </span> <br>
+    <input type="submit"  value="Remove this Location">
+  </form>
+</section>
 {% endblock %}

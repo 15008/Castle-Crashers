@@ -44,3 +44,17 @@ li a {
   font-family: 'Bungee', cursive;
   line-height: 20px;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 15px;
+  margin: 0 20px 20px 20px;
+}
+.grid-container > div {
+  background-color: #FFFFFF;
+  text-align: center;
+  width: inherit;
+  height: 0;
+  padding-bottom: 100%;
+  vertical-align: text-bottom;
+}
