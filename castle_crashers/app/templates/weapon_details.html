@@ -1,33 +1,44 @@
 {% extends 'layout.html' %}
 {% block content %}
-<p>
-  Name: <br> {{weapon.name}}
-  <br>
-  Location Found: <br> <a href="../location/{{weapon.locationid}}">{{location.name}}</a>
-  <br>
-  Required Items: <br> {{weapon.reqItem}}
-  <br>
-  Cost: <br> {{weapon.cost}} gold
-  <br>
-  Required Level: <br> {{weapon.reqLevel}}
-  <br>
-  strength: <br> {{weapon.strength}}
-  <br>
-  Magic: <br> {{weapon.magic}}
-  <br>
-  Defense: <br> {{weapon.defense}}
-  <br>
-  Agility: <br> {{weapon.agility}}
-  <br>
-  Ice Damage Bonus: <br> {{weapon.iceSpecial}}
-  <br>
-  Critical Damage Bonus: <br> {{weapon.critSpecial}}
-  <br>
-  Fire Damage Bonus: <br> {{weapon.fireSpecial}}
-  <br>
-  Electricity Damage Bonus: <br> {{weapon.elecSpecial}}
-  <br>
-  Poison Damage Bonus: <br> {{weapon.poiSpecial}}
-  <br>
-</p>
+<div class = "grid-containerOW">
+  <div><p>Image</p></div>
+
+  <div class = "textBox">
+    <p>
+      strength: <br> {{weapon.strength}}
+      <br>
+      Magic: <br> {{weapon.magic}}
+      <br>
+      Defense: <br> {{weapon.defense}}
+      <br>
+      Agility: <br> {{weapon.agility}}
+      <br>
+      Ice Damage Bonus: <br> {{weapon.iceSpecial}}
+      <br>
+      Critical Damage Bonus: <br> {{weapon.critSpecial}}
+      <br>
+      Fire Damage Bonus: <br> {{weapon.fireSpecial}}
+      <br>
+      Electricity Damage Bonus: <br> {{weapon.elecSpecial}}
+      <br>
+      Poison Damage Bonus: <br> {{weapon.poiSpecial}}
+      <br>
+    </p>
+  </div>
+
+  <div class = "textBox">
+    <p>
+      Name: <br> {{weapon.name}}
+      <br>
+      Required Items: <br> {{weapon.reqItem}}
+      <br>
+      Cost: <br> {{weapon.cost}} gold
+      <br>
+      Required Level: <br> {{weapon.reqLevel}}
+      <br>
+      Location Found: <br> <a href="../location/{{weapon.locationid}}">{{location.name}}</a>
+      <br>
+    </p>
+  </div>
+</div>
 {% endblock %}

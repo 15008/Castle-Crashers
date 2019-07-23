@@ -1,24 +1,23 @@
 {% extends 'layout.html' %}
 {% block content %}
-<p>
-  Name: <br> {{orb.name}}
-  <br>
-  Description: <br> {{orb.description}}
-  <br>
-  Location Found: <br> <a href="../location/{{orb.locationid}}">{{location.name}}</a>
-  <br>
-  Item Requirements: <br> {{orb.req }}
-  <br>
-  Bonuses:
-  <br>
-  Magic: {{orb.magicBonus}}
-  <br>
-  Strength: {{orb.strengthBonus}}
-  <br>
-  Defense: {{orb.defenseBonus}}
-  <br>
-  Agility: {{orb.agilityBonus}}
-  <br>
-  Experience Multiplier: {{orb.xpBonus}}
-</p>
+<div class = "grid-containerOW">
+  <div><img class = "od" src="/static/animalOrbs/{{orb.id}}.png" alt="{{orb.name}}"></div>
+
+  <div class = "textBox">
+    <h2>Bonuses:</h2>
+    <h2>Magic:</h2><p>{{orb.magicBonus}}</p>
+    <h2>Strength:</h2><p>{{orb.strengthBonus}}</p>
+    <h2>Defense:</h2><p>{{orb.defenseBonus}}</p>
+    <h2>Agility:</h2><p>{{orb.agilityBonus}}</p>
+    <h2>Experience Multiplier:</h2><p>{{orb.xpBonus}}</p>
+  </div>
+
+  <div class = "textBox">
+    <h2>{{orb.name}}</h2>
+    <h2>Description</h2><p>{{orb.description}}</p>
+    <h2>Requirements</h2><p>{{orb.req}}</p>
+    <h2>Cost</h2><p>{{orb.cost}}</p>
+    <h2>Location Found</h2><p><a href="../location/{{orb.locationid}}">{{location.name}}</a></p>
+  </div>
+</div>
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section>
+  <p>Add a location</p><br>
+  <form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    {{ form.name}} <span style="color:red"> {{form.name.errors}} </span> <br>
+    {{ form.description}} <span style="color:red"> {{form.description.errors}} </span> <br>
+    {{ form.cost}} <span style="color:red"> {{form.req.errors}} </span> <br>
+    {{ form.magicBonus}} <span style="color:red"> {{form.magicBonus.errors}} </span> <br>
+    {{ form.strengthBonus}} <span style="color:red"> {{form.strengthBonus.errors}} </span> <br>
+    {{ form.defenseBonus}} <span style="color:red"> {{form.defenseBonus.errors}} </span> <br>
+    {{ form.agilityBonus}} <span style="color:red"> {{form.agilityBonus.errors}} </span> <br>
+    {{ form.xpBonus}} <span style="color:red"> {{form.xpBonus.errors}} </span> <br>
+    <button type="button" value="Add this Location">
+    <button type="button" onclick="submit">Add this location</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-container">
+<div class = "grid-containerMain">
   {% for location in locations %}
     <div><a href = "/location/{{location.id}}">{{location.name}}</a></div>
   {% endfor %}

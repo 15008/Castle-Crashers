@@ -1,23 +1,32 @@
 html {
   background-color: #464646;
   color: #000000;
-}
-p {
-  font-family: 'Basic', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   text-align: justify;
 }
-section, nav {
+footer, nav {
   background-color: #FFFFFF;
   margin: 0 20px 20px 20px;
 }
+.textBox, footer, h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 h1 {
-  font-size: 5vw;
-  font-family: 'Bungee Shade', cursive;
+  font-size: 7vw;
+  font-family: 'Oswald', sans-serif;
   color: #FFFFFF;
   margin: 10px;
-  line-height: 7vw;
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0;
+}
+h2, li a {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
 }
 a:visited {
   color: #000000;
@@ -40,21 +49,63 @@ li a {
   padding: 10px;
   text-align: center;
   display: block;
-  font-size: 20px;
-  font-family: 'Bungee', cursive;
   line-height: 20px;
 }
-.grid-container {
+.grid-containerMain, .grid-containerSecond, .grid-containerOW {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
   grid-gap: 15px;
   margin: 0 20px 20px 20px;
 }
-.grid-container > div {
+.grid-containerMain {
+  grid-template-columns: repeat(8, 1fr);
+}
+.grid-containerMain > div {
   background-color: #FFFFFF;
   text-align: center;
   width: inherit;
   height: 0;
   padding-bottom: 100%;
-  vertical-align: text-bottom;
+  display: inline-block;
+}
+.ao {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.od {
+  width: 100%;
+  position: relative;
+}
+.grid-containerSecond {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-containerSecond > div {
+  background-color: #FFFFFF;
+  width: inherit;
+  height: 0;
+  padding-bottom: 100%;
+}
+.grid-containerOW {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.grid-containerOW > div {
+  background-color: #FFFFFF;
+  width: inherit;
+  height: auto;
+}
+.grid-containerOW > div > p {
+  margin: 10px;
+}
+.name {
+  animation-name: magic;
+  position: absolute;
+  z-index: 1;
+}
+@webkit-keyframes magic {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+@keyframes magic {
+  from {opacity: 1}
+  to {opacity: 0}
 }

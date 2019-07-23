@@ -1,8 +1,11 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-container">
+<div class = "grid-containerMain">
   {% for orb in orbs %}
-    <div><a href = "/orb/{{orb.id}}">{{orb.name}}</a></div>
+    <div>
+      <img class = "ao" src="/static/animalOrbs/{{orb.id}}.png" alt="{{orb.name}}">
+      <a class = "name" href = "/orb/{{orb.id}}">{{orb.name}}</a>
+    </div>
   {% endfor %}
 </div>
 {% endblock %}

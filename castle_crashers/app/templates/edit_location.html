@@ -1,27 +1,15 @@
 {% extends 'layout.html' %}
+
 {% block content %}
 <section>
-  <p>
-    Name: <br> {{location.name}}
-    <br>
-    Description: <br> {{location.description}}
-    <br>
-    Items in {{location.name}}:
-    <br>
-    {% for weapon in location.weaponLoc %}
-      <a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a>
-      <br>
-    {% endfor %}
-    Chapter: <br> {{location.chapter}}
-    <br>
-    Bonuses: <br> {{location.localeType}}
-  </p>
+  <p>Add a location</p><br>
   <form method="POST" enctype="multipart/form-data">
     {{ form.csrf_token }}
     {{ form.name}} <span style="color:red"> {{form.name.errors}} </span> <br>
     {{ form.description}} <span style="color:red"> {{form.description.errors}} </span> <br>
     {{ form.chapter}} <span style="color:red"> {{form.chapter.errors}} </span> <br>
     {{ form.localeType}} <span style="color:red"> {{form.localeType.errors}} </span> <br>
-    <input type="submit" value="Remove this Location">
+    <input type="submit" value="Add this Location">
   </form>
+</section>
 {% endblock %}
