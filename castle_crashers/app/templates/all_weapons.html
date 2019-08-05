@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-containerMain">
+<div class = "grid-WO-all">
   {% for weapon in weapons %}
     <div><a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a></div>
     {% endfor %}

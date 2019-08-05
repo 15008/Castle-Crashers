@@ -1,44 +1,30 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-containerOW">
-  <div><p>Image</p></div>
+<div class = "grid-WO-details">
+  <div><img class = "od" src="/static/weapons/{{weapon.id}}.png" alt="{{weapon.name}}"></div>
 
-  <div class = "textBox">
-    <p>
-      strength: <br> {{weapon.strength}}
-      <br>
-      Magic: <br> {{weapon.magic}}
-      <br>
-      Defense: <br> {{weapon.defense}}
-      <br>
-      Agility: <br> {{weapon.agility}}
-      <br>
-      Ice Damage Bonus: <br> {{weapon.iceSpecial}}
-      <br>
-      Critical Damage Bonus: <br> {{weapon.critSpecial}}
-      <br>
-      Fire Damage Bonus: <br> {{weapon.fireSpecial}}
-      <br>
-      Electricity Damage Bonus: <br> {{weapon.elecSpecial}}
-      <br>
-      Poison Damage Bonus: <br> {{weapon.poiSpecial}}
-      <br>
-    </p>
+  <div>
+    <h2>Bonuses:</h2>
+    <h2>Strength:</h2><p>{{weapon.strength}}</p>
+    <h2>Magic:</h2><p>{{weapon.magic}}</p>
+    <h2>Defense:</h2><p>{{weapon.defense}}</p>
+    <h2>Agility:</h2><p>{{weapon.agility}}</p>
+    <h2>Ice Damage Bonus:</h2><p>{{weapon.iceSpecial}}</p>
+    <h2>Critical Damage Bonus:</h2><p>{{weapon.critSpecial}}</p>
+    <h2>Fire Damage Bonus:</h2><p>{{weapon.fireSpecial}}</p>
+    <h2>Electricity Damage Bonus:</h2><p>{{weapon.elecSpecial}}</p>
+    <h2>Poison Damage Bonus:</h2><p>{{weapon.poiSpecial}}</p>
   </div>
 
-  <div class = "textBox">
-    <p>
-      Name: <br> {{weapon.name}}
-      <br>
-      Required Items: <br> {{weapon.reqItem}}
-      <br>
-      Cost: <br> {{weapon.cost}} gold
-      <br>
-      Required Level: <br> {{weapon.reqLevel}}
-      <br>
-      Location Found: <br> <a href="../location/{{weapon.locationid}}">{{location.name}}</a>
-      <br>
-    </p>
+  <div>
+    <h2>{{weapon.name}}</h2>
+    <h2>Required Items:</h2><p>{{weapon.reqItem}}</p>
+    <h2>Cost:</h2><p>{{weapon.cost}} GOLD</p>
+    <h2>Required Level:</h2><p>{{weapon.reqLevel}}</p>
+    <h2>Location Found:</h2><p><a href="../location/{{weapon.locationid}}">{{location.name}}</a></p>
   </div>
+
+  <div><a href = "/edit_weapon/{{weapon.id}}">Edit Weapon details</a></div>
+
 </div>
 {% endblock %}

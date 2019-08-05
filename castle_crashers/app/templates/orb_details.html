@@ -1,9 +1,9 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-containerOW">
+<div class = "grid-WO-details">
   <div><img class = "od" src="/static/animalOrbs/{{orb.id}}.png" alt="{{orb.name}}"></div>
 
-  <div class = "textBox">
+  <div>
     <h2>Bonuses:</h2>
     <h2>Magic:</h2><p>{{orb.magicBonus}}</p>
     <h2>Strength:</h2><p>{{orb.strengthBonus}}</p>
@@ -12,12 +12,15 @@
     <h2>Experience Multiplier:</h2><p>{{orb.xpBonus}}</p>
   </div>
 
-  <div class = "textBox">
+  <div>
     <h2>{{orb.name}}</h2>
     <h2>Description</h2><p>{{orb.description}}</p>
     <h2>Requirements</h2><p>{{orb.req}}</p>
     <h2>Cost</h2><p>{{orb.cost}}</p>
     <h2>Location Found</h2><p><a href="../location/{{orb.locationid}}">{{location.name}}</a></p>
   </div>
+
+  <div><a href = "/edit_orb/{{orb.id}}">Edit Animal Orb details</a></div>
+
 </div>
 {% endblock %}

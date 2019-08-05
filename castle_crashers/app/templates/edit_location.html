@@ -2,14 +2,14 @@
 
 {% block content %}
 <section>
-  <p>Add a location</p><br>
+  <p>Editing Locations</p><br>
   <form method="POST" enctype="multipart/form-data">
     {{ form.csrf_token }}
-    {{ form.name}} <span style="color:red"> {{form.name.errors}} </span> <br>
-    {{ form.description}} <span style="color:red"> {{form.description.errors}} </span> <br>
-    {{ form.chapter}} <span style="color:red"> {{form.chapter.errors}} </span> <br>
-    {{ form.localeType}} <span style="color:red"> {{form.localeType.errors}} </span> <br>
-    <input type="submit" value="Add this Location">
+    <p>{{ form.name}} <span style="color:red"> {{form.name.errors}} </span></p> <br>
+    <p>{{ form.description}}<span style="color:red"> {{form.description.errors}} </span></p> <br>
+    <p>{{ form.chapter}} <span style="color:red"> {{form.chapter.errors}} </span></p> <br>
+    <p>{{ form.localeType}}<span style="color:red"> {{form.localeType.errors}} </span></p> <br>
+    <input type="submit" value="Submit">
   </form>
 </section>
 {% endblock %}

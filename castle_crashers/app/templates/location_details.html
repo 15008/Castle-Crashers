@@ -1,27 +1,25 @@
 {% extends 'layout.html' %}
 {% block content %}
-<section>
-  <p>
-    Name: <br> {{location.name}}
-    <br>
-    Description: <br> {{location.description}}
-    <br>
-    Items in {{location.name}}:
-    <br>
+<div class = "grid-L-details">
+  <div><img class = "od" src="/static/locations/{{location.id}}.png" alt="{{location.name}}"></div>
+
+  <div>
+    <h2>{{location.name}}</h2>
+    <h2>Description:</h2><p>{{location.description}}</p>
+    <h2>Chapter:</h2><p>{{location.chapter}}</p>
+    <h2>Location Type:</h2><p>{{location.localeType}}<p>
+  </div>
+
+  <div>
+    <h2>Items in {{location.name}}:</h2>
     {% for weapon in location.weaponLoc %}
       <a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a>
-      <br>
     {% endfor %}
-    Chapter: <br> {{location.chapter}}
-    <br>
-    Bonuses: <br> {{location.localeType}}
-  </p>
-  <form method="POST" enctype="multipart/form-data">
-    {{ form.csrf_token }}
-    {{ form.name}} <span style="color:red"> {{form.name.errors}} </span> <br>
-    {{ form.description}} <span style="color:red"> {{form.description.errors}} </span> <br>
-    {{ form.chapter}} <span style="color:red"> {{form.chapter.errors}} </span> <br>
-    {{ form.localeType}} <span style="color:red"> {{form.localeType.errors}} </span> <br>
-    <input type="submit" value="Remove this Location">
-  </form>
+    {% for orb in location.orbLoc %}
+      <a href = "/orb/{{orb.id}}">{{orb.name}}</a>
+    {% endfor %}
+  </div>
+
+  <div><a href = "/edit_location/{{location.id}}">Edit Location details</a></div>
+</div>
 {% endblock %}

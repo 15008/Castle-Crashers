@@ -13,8 +13,6 @@ class Orb(db.Model):
     defenseBonus = db.Column(db.Integer)
     agilityBonus = db.Column(db.Integer)
     xpBonus = db.Column(db.Integer)
-    #def __repr__(self):
-    #    return 'Animal Orb: {}'.format(self.title)
 
 class Location(db.Model):
     __tablename__ = 'Location'
@@ -23,10 +21,8 @@ class Location(db.Model):
     description = db.Column(db.String(2000))
     chapter = db.Column(db.Integer, nullable=False)
     localeType = db.Column(db.String(10))
-    orbs = db.relationship('Orb')
-    weaponLoc = db.relationship('Weapon', backref = 'locale')
-    #def __repr__(self):
-    #    return 'Location: {}'.format(self.title)
+    orbLoc = db.relationship('Orb')
+    weaponLoc = db.relationship('Weapon')
 
 class Weapon(db.Model):
     __tablename__ = 'Weapon'
@@ -46,5 +42,3 @@ class Weapon(db.Model):
     elecSpecial = db.Column(db.Integer)
     poiSpecial = db.Column(db.Integer)
     cost = db.Column(db.Integer)
-    #def __repr__(self):
-    #    return 'Weapon: {}'.format(self.title)

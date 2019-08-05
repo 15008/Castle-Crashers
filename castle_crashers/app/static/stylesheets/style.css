@@ -1,15 +1,15 @@
+/*==========Main==========*/
 html {
   background-color: #464646;
   color: #000000;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  text-align: justify;
 }
-footer, nav {
+footer, nav, section {
   background-color: #FFFFFF;
   margin: 0 20px 20px 20px;
 }
-.textBox, footer, h2 {
+footer, h2 {                                  /*.textBox, */
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -28,10 +28,8 @@ h2, li a {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
 }
-a:visited {
-  color: #000000;
-}
-a:link {
+/*==========links and Navigation==========*/
+a:visited, a:link {
   color: #000000;
 }
 ul {
@@ -51,61 +49,58 @@ li a {
   display: block;
   line-height: 20px;
 }
-.grid-containerMain, .grid-containerSecond, .grid-containerOW {
+/*==========Grid==========*/
+.grid-WO-all {
+  grid-template-columns: repeat(8, 1fr);
   display: grid;
   grid-gap: 15px;
   margin: 0 20px 20px 20px;
 }
-.grid-containerMain {
-  grid-template-columns: repeat(8, 1fr);
-}
-.grid-containerMain > div {
+.grid-WO-all > div {
+  padding-bottom: 100%;
   background-color: #FFFFFF;
-  text-align: center;
   width: inherit;
   height: 0;
-  padding-bottom: 100%;
-  display: inline-block;
 }
+.grid-L-all {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 15px;
+  margin: 0 20px 20px 20px;
+}
+.grid-L-all > div {
+  padding-bottom: 50%;
+  background-color: #FFFFFF;
+  width: inherit;
+  height: 0;
+}
+.grid-L-details {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-gap: 15px;
+  margin: 0 20px 20px 20px;
+}
+.grid-L-details > div {
+  background-color: #FFFFFF;
+  width: inherit;
+}
+.grid-WO-details {
+  grid-template-columns: 1fr 1fr 2fr;
+  display: grid;
+  grid-gap: 15px;
+  margin: 0 20px 20px 20px;
+}
+.grid-WO-details > div {
+  background-color: #FFFFFF;
+  width: inherit;
+}
+/*==========Images==========*/
 .ao {
   width: 100%;
   position: relative;
-  z-index: 0;
 }
 .od {
   width: 100%;
   position: relative;
 }
-.grid-containerSecond {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid-containerSecond > div {
-  background-color: #FFFFFF;
-  width: inherit;
-  height: 0;
-  padding-bottom: 100%;
-}
-.grid-containerOW {
-  grid-template-columns: 1fr 1fr 2fr;
-}
-.grid-containerOW > div {
-  background-color: #FFFFFF;
-  width: inherit;
-  height: auto;
-}
-.grid-containerOW > div > p {
-  margin: 10px;
-}
-.name {
-  animation-name: magic;
-  position: absolute;
-  z-index: 1;
-}
-@webkit-keyframes magic {
-  from {opacity: 1}
-  to {opacity: 0}
-}
-@keyframes magic {
-  from {opacity: 1}
-  to {opacity: 0}
-}
+/*==========EXPERIEMENTAL==========*/
