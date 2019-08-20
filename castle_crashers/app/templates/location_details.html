@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-L-details">
-  <div><img class = "od" src="/static/locations/{{location.id}}.png" alt="{{location.name}}"></div>
+<div class = "location_details">
+  <div><img src="/static/locations/{{location.id}}.png" alt="{{location.name}}"></div>
 
   <div>
     <h2>{{location.name}}</h2>
@@ -20,6 +20,9 @@
     {% endfor %}
   </div>
 
-  <div><a href = "/edit_location/{{location.id}}">Edit Location details</a></div>
+  <div>
+    <a href = "/edit_location/{{location.id}}">Edit Location details</a>
+    <a href = "/remove_location/{{location.id}}">Remove Location</a>
+  </div>
 </div>
 {% endblock %}

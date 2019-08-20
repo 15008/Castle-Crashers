@@ -50,56 +50,86 @@ li a {
   line-height: 20px;
 }
 /*==========Grid==========*/
-.grid-WO-all {
-  grid-template-columns: repeat(8, 1fr);
+.all_orbs {
+  grid-template-columns: repeat(10, 1fr);
   display: grid;
   grid-gap: 15px;
   margin: 0 20px 20px 20px;
 }
-.grid-WO-all > div {
+.all_orbs > div {
   padding-bottom: 100%;
   background-color: #FFFFFF;
   width: inherit;
   height: 0;
 }
-.grid-L-all {
-  grid-template-columns: repeat(4, 1fr);
+.all_weapons {
+  grid-template-columns: repeat(10, 1fr);
   display: grid;
   grid-gap: 15px;
   margin: 0 20px 20px 20px;
 }
-.grid-L-all > div {
-  padding-bottom: 50%;
+.all_weapons > div {
+  padding-bottom: 200%;
   background-color: #FFFFFF;
   width: inherit;
   height: 0;
 }
-.grid-L-details {
-  grid-template-columns: 1fr 1fr;
-  display: grid;
-  grid-gap: 15px;
-  margin: 0 20px 20px 20px;
-}
-.grid-L-details > div {
-  background-color: #FFFFFF;
-  width: inherit;
-}
-.grid-WO-details {
+.weapon_details {
   grid-template-columns: 1fr 1fr 2fr;
   display: grid;
   grid-gap: 15px;
   margin: 0 20px 20px 20px;
 }
-.grid-WO-details > div {
+.weapon_details > div {
+  background-color: #FFFFFF;
+  width: inherit;
+}
+.all_locations {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 15px;
+  margin: 0 20px 20px 20px;
+}
+.all_locations > div {
+  padding-bottom: 50%;
+  background-color: #FFFFFF;
+  width: inherit;
+  height: 0;
+}
+.location_details {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-gap: 15px;
+  margin: 0 20px 20px 20px;
+}
+.location_details > div {
+  background-color: #FFFFFF;
+  width: inherit;
+}
+.orb_details {
+  grid-template-columns: 1fr 1fr 2fr;
+  display: grid;
+  grid-gap: 15px;
+  margin: 0 20px 20px 20px;
+}
+.orb_details > div {
   background-color: #FFFFFF;
   width: inherit;
 }
 /*==========Images==========*/
-.ao {
+.orb_image_1 {
   width: 100%;
   position: relative;
 }
-.od {
+.orb_image_2 {
+  width: 100%;
+  position: relative;
+}
+.weapon_image_1 {
+  width: 100%;
+  position: relative;
+}
+.weapon_image_2 {
   width: 100%;
   position: relative;
 }

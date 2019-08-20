@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-WO-details">
+<div class = "waepon_details">
   <div><img class = "od" src="/static/weapons/{{weapon.id}}.png" alt="{{weapon.name}}"></div>
 
   <div>
@@ -24,7 +24,12 @@
     <h2>Location Found:</h2><p><a href="../location/{{weapon.locationid}}">{{location.name}}</a></p>
   </div>
 
-  <div><a href = "/edit_weapon/{{weapon.id}}">Edit Weapon details</a></div>
+  <div>
+    <a href = "/edit_weapon/{{weapon.id}}">Edit Weapon details</a>
+    <form method='POST'>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 
 </div>
 {% endblock %}

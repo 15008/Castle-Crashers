@@ -1,8 +1,12 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-L-all">
+<div class = "all_locations">
   {% for location in locations %}
-    <div><a href = "/location/{{location.id}}">{{location.name}}</a></div>
+    <div>
+      <a href = "/location/{{location.id}}">
+        <h2>{{location.name}}</h2>
+      </a>
+    </div>
   {% endfor %}
   </div>
 {% endblock %}

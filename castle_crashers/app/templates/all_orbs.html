@@ -1,10 +1,11 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-WO-all">
+<div class = "all_orbs">
   {% for orb in orbs %}
     <div>
-      <img class = "ao" src="/static/animalOrbs/{{orb.id}}.png" alt="{{orb.name}}">
-      <a class = "name" href = "/orb/{{orb.id}}">{{orb.name}}</a>
+      <a href = "/orb/{{orb.id}}">
+        <img class = "orb_image_1" src="/static/animalOrbs/{{orb.id}}.png">
+      </a>
     </div>
   {% endfor %}
 </div>

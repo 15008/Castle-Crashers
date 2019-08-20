@@ -1,14 +1,53 @@
 {% extends 'layout.html' %}
-
 {% block content %}
 <section>
-  <p>Editing Locations</p><br>
+  <h2>Locations and tweaking</h2>
   <form method="POST" enctype="multipart/form-data">
     {{ form.csrf_token }}
-    <p>{{ form.name}} <span style="color:red"> {{form.name.errors}} </span></p> <br>
-    <p>{{ form.description}}<span style="color:red"> {{form.description.errors}} </span></p> <br>
-    <p>{{ form.chapter}} <span style="color:red"> {{form.chapter.errors}} </span></p> <br>
-    <p>{{ form.localeType}}<span style="color:red"> {{form.localeType.errors}} </span></p> <br>
+    <div>
+      {{form.name.label}}
+      <br>
+      {{form.name}}
+      {% if form.name.errors %}
+        <ul>
+          {% for error in form.name.errors %}<li>{{ error }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div>
+      {{form.description.label}}
+      <br>
+      {{form.description}}
+      {% if form.description.errors %}
+        <ul>
+          {% for error in form.description.errors %}<li>{{ error }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div>
+      {{form.chapter.label}}
+      <br>
+      {{form.chapter}}
+      {% if form.chapter.errors %}
+        <ul>
+          {% for error in form.chapter.errors %}<li>{{ error }}</li>{% endfor %}
+        </ul>
+    {% endif %}
+    </div>
+
+    <div>
+      {{form.localeType.label}}
+      <br>
+      {{form.localeType}}
+      {% if form.localeType.errors %}
+        <ul>
+          {% for error in form.name.errors %}<li>{{ error }}</li>{% endfor %}
+        </ul>
+    {% endif %}
+    </div>
+
     <input type="submit" value="Submit">
   </form>
 </section>

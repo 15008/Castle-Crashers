@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
-
 {% block content %}
 <section>
+  <p>Animal Orb Form</p><br>
   <form method="POST" enctype="multipart/form-data">
     {{form.csrf_token}}
     {{form.name}} <span style="color:red"> {{form.name.errors}} </span> <br>
@@ -11,7 +11,7 @@
     {{form.magic}} <span style="color:red"> {{form.magic.errors}} </span> <br>
     {{form.defense}} <span style="color:red"> {{form.defense.errors}} </span> <br>
     {{form.agility}} <span style="color:red"> {{form.agility.errors}} </span> <br>
-    {{form.iceSpecial}} <span style="color:red"> {{form.IceSpecial.errors}} </span> <br>
+    {{form.iceSpecial}} <span style="color:red"> {{form.iceSpecial.errors}} </span> <br>
     {{form.critSpecial}} <span style="color:red"> {{form.critSpecial.errors}} </span> <br>
     {{form.fireSpecial}} <span style="color:red"> {{form.fireSpecial.errors}} </span> <br>
     {{form.elecSpecial}} <span style="color:red"> {{form.elecSpecial.errors}} </span> <br>

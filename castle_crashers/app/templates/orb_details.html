@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-WO-details">
-  <div><img class = "od" src="/static/animalOrbs/{{orb.id}}.png" alt="{{orb.name}}"></div>
+<div class = "orb_details">
+  <div><img class = "orb_image_1" src="/static/animalOrbs/{{orb.id}}.png" alt="{{orb.name}}"></div>
 
   <div>
     <h2>Bonuses:</h2>
@@ -20,7 +20,12 @@
     <h2>Location Found</h2><p><a href="../location/{{orb.locationid}}">{{location.name}}</a></p>
   </div>
 
-  <div><a href = "/edit_orb/{{orb.id}}">Edit Animal Orb details</a></div>
+  <div>
+    <a href = "/edit_orb/{{orb.id}}">Edit Animal Orb details</a>
+    <form method='POST'>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 
 </div>
 {% endblock %}

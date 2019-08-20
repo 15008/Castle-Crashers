@@ -1,8 +1,12 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class = "grid-WO-all">
+<div class = "all_weapons">
   {% for weapon in weapons %}
-    <div><a href = "/weapon/{{weapon.id}}">{{weapon.name}}</a></div>
+    <div>
+      <a href = "/weapon/{{weapon.id}}">
+        <img class = "weapon_image_1" src="/static/weapons/{{weapon.id}}.png" alt="{{weapon.name}}">
+      </a>
+    </div>
     {% endfor %}
 </div>
 {% endblock %}
